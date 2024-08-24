@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="title">Tic Tac Toe</h1>
+    
+    <div class="wrapper">
+        <div class="boxes">
+            <button class="box" id="box1" disabled></button>
+            <button class="box" id="box2" disabled></button>
+            <button class="box" id="box3" disabled></button>
+            <button class="box" id="box4" disabled></button>
+            <button class="box" id="box5" disabled></button>
+            <button class="box" id="box6" disabled></button>
+            <button class="box" id="box7" disabled></button>
+            <button class="box" id="box8" disabled></button>
+            <button class="box" id="box9" disabled></button>
+        </div>
+        <button id="start" onclick="StartGame()">Start</button>
+        <h1 id="player">You are X</h1>
+    </div>
+
+    <div class="popupContainer">
+        <div class="popup">
+
+            <p id="winner"></p>
+
+            <div class="controller">
+                <button class="controlls" onclick="exit()" id="Exit">Exit</button>
+                <button class="controlls" onclick="StartGame()" id="newGame">New Game</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>

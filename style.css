@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #40916C;
+}
+
+.title {
+    width: 100vw;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    color: #081C15;
+}
+
+.wrapper {
+    width: 100vw;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .boxes {
+        display: grid;
+        grid-template-columns: repeat(3, 125px);
+        grid-template-rows: repeat(3, 125px);
+        gap: 15px;
+
+        .box {
+            width: 125px;
+            height: 125px;
+            border: none;
+            border-radius: 5%;
+            background-color: #D8F3DC;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #B7E4C7;
+            }
+
+            &:disabled {
+                background-color: #D8F3DC;
+                cursor: default;  
+                color: black;
+                font-size: 50px;
+            }
+        }
+    }
+    #start {
+        margin-top: 20px;
+        margin-left: 5px;
+        padding: 15px 25px;
+        border: none;
+        background-color: #D8F3DC;
+        cursor: pointer;
+        font-size: 25px;
+
+        &:hover {
+            background-color: #B7E4C7;
+        }
+
+        &:disabled {
+            background-color: #D8F3DC;
+            cursor: default;  
+            color: black;
+            font-size: 25px;
+        }
+    }
+    #start.active {
+        display: none;
+    }
+    #player {
+        display: none;
+        margin-top: 30px;
+        color: #081C15;
+    }
+    #player.active {
+        display: block;
+    }
+}
+
+.popupContainer {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    .popup {
+        background-color: #1B4332;
+        width: 60%;
+        height: 85%;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .controller {
+            height: 5rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            
+            .controlls {
+                margin: 0 30px;
+                width: 120px;
+                height: 50px;
+                background-color: #D8F3DC;
+                border: none;
+                border-radius: 5px;
+                font-size: 20px;
+
+                &:hover {
+                    background-color: #B7E4C7;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    
+    #winner {
+        font-size: 110px;
+        color: #D8F3DC;
+    }
+}
+.popupContainer.active {
+    display: flex;
+}
